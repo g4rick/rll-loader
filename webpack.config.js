@@ -1,9 +1,12 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: [
+    './src/index.js',
+    // './src/no-react.js'
+  ],
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
   },
   mode: 'development',
@@ -11,13 +14,13 @@ module.exports = {
     rules: [{
       test: /\.js$/,
       use: [
+        'hlj-img-url-loader',
         {
           loader: 'babel-loader',
           options: {
             presets: ['env', 'react']
           }
-        },
-        'my-loader'
+        }
       ]
     }]
   },

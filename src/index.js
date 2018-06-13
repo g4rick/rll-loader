@@ -1,9 +1,9 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom';
 
 const App = () => {
   return (
-    <div>hello loader</div>
+    <img src="https://hlj-img.b0.upaiyun.com/zmw/upload/mobile/star/star5.gif" alt="star"/>
   )
 }
 
