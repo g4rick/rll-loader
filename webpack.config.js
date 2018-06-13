@@ -14,7 +14,12 @@ module.exports = {
     rules: [{
       test: /\.js$/,
       use: [
-        'hlj-img-url-loader',
+        {
+          loader: 'hlj-img-url-loader',
+          options: {
+            target: 'img-ucdn-static.helijia.com'
+          }
+        },
         {
           loader: 'babel-loader',
           options: {
